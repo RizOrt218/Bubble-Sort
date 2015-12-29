@@ -20,7 +20,7 @@ function quickSort( numArr ) {
       // rightLength++; //2
     }
   }
-  console.log(quickSort(left).concat(pivot, quickSort(right)));
+  //console.log(quickSort(left).concat(pivot, quickSort(right)));
   return quickSort(left).concat(pivot, quickSort(right));
 
   //grab a number in your array
