@@ -14,19 +14,16 @@ function bubbleSort( numArr ) {
       numArr[i + 1] = currentNum;
       count++; //increment count whenever switch takes place
     }
-    // while( count !== 0 ) {
-    //   return bubbleSort( numArr );
-    // }
-    //return numArr if count
-    if( next === undefined && count === 0 ) {
-      return numArr;
-    }
-    //we've reached the end of array but swapped numbers took place
-    if( next === undefined && count !== 0 ) {
-      return bubbleSort( numArr );
+
+    //return numArr if reached end of array
+    if( i === (numArr.length - 1) ) {
+      if( count === 0 ){ //& if count is 0; does not need swapping
+        return numArr;
+      }
+      else {
+        return bubbleSort( numArr );
+      }
     }
   }
 
 }
-// bubbleSort();
-// console.log(bubbleSort());
