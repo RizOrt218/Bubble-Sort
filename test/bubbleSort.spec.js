@@ -12,10 +12,10 @@ describe('bubble sort', function() {
   });
 
   it('should sort an unsorted array', function() {
-    var result = bubbleSort([ 7,5,6,3,4,2,1]);
+    var result = bubbleSort([ 4,5,6,3,7,2,1,8]);
 
     expect( result ).to.be.an('array');
-    expect( result ).to.deep.equal([ 1,2,3,4,5,6,7]);
+    expect( result ).to.deep.equal([ 1,2,3,4,5,6,7,8]);
   });
 });
 
@@ -26,7 +26,7 @@ describe('quick sort', function() {
   });
 
   it('should sort an unsorted array', function() {
-    var result = quickSort([ 7,5,6,3,4,2,1]);
+    var result = quickSort([ 5,2,7,6,3,4,1]);
 
     expect( result ).to.be.an('array');
     expect( result ).to.deep.equal([ 1,2,3,4,5,6,7]);
