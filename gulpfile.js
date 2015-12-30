@@ -27,11 +27,11 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', function() {
-  gulp.src('./js/app.js')
+  gulp.src('./js/*.js')
         .pipe(browserify({
           insertGlobals : true
         }))
         .pipe(gulp.dest('./js/build'));
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'sass', 'livereload', 'watch']);
