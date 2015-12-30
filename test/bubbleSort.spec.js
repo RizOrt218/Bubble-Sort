@@ -2,17 +2,17 @@ var chai = require('chai');
 var expect = chai.expect;
 chai.should();
 
-var bubsModule = require('./../sorting_algo/bubbleSort.js');
-// var bubbleSortModule = require('./../sorting_algo/bubbleSort.js');
-var quickSort = require('./../sorting_algo/quickSort.js');
+var bubbleSortModule = require('./../js/bubbleSort.js');
+var quickSort = require('./../js/quickSort.js');
+var mergeSortModule = require('./../js/mergeSort.js');
 
 describe('bubble sort', function() {
   it('should be a function that exist', function() {
-    expect(bubsModule).to.be.a('object');
+    expect(bubbleSortModule).to.be.a('object');
   });
 
   it('should sort an unsorted array', function() {
-    var result = bubsModule.bubbleSort([ 4, 5, 6, 3, 7, 2, 1, 8 ]);
+    var result = bubbleSortModule.bubbleSort([ 4, 5, 6, 3, 7, 2, 1, 8 ]);
 
     expect( result ).to.be.an('array');
     expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6, 7, 8 ] );
@@ -30,6 +30,19 @@ describe('quick sort', function() {
 
     expect( result ).to.be.an('array');
     // expect( result ).to.deep.equal([ 1,2,3,4,5,6,7 ]);
+    expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6 ]);
+  });
+});
+
+describe('Merge sort', function() {
+  it('should be a function that exist', function() {
+    expect(mergeSortModule).to.be.a('object');
+  });
+
+  it('should sort an unsorted array', function() {
+    var result = mergeSortModule.merge([ 2, 3, 1, 4, 6, 5 ]);
+
+    expect( result ).to.be.an('array');
     expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6 ]);
   });
 });
