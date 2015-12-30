@@ -9,13 +9,12 @@ var mergeSortModule = module.exports = (function () {
         return numArr;
       }
 
-      for( var i = 0; i < numArr.length; i++ ) {
-        middle = Math.floor((0 + numArr.length)/2);
-        console.log(middle);
-      }
+      middle = Math.floor((numArr.length)/2);
+      console.log(middle);
     }
 
 
   };
 }());
+
 

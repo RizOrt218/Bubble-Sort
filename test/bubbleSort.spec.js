@@ -38,7 +38,7 @@ describe('Merge sort', function() {
   });
 
   it('should sort an unsorted array', function() {
-    var result = mergeSortModule.merge([ 2, 3, 1, 4, 6, 5 ]);
+    var result = mergeSortModule.mergeSort([ 2, 3, 1, 4, 6, 5 ]);
 
     expect( result ).to.be.an('array');
     expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6 ]);
