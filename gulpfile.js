@@ -31,7 +31,7 @@ gulp.task('build', function() {
         .pipe(browserify({
           insertGlobals : true
         }))
-        .pipe(gulp.dest('./js/build'));
+        .pipe(gulp.dest('./public/js/build'));
 });
 
-gulp.task('default', ['build', 'sass', 'livereload', 'watch']);
+gulp.task('default', ['build', 'sass', 'connect', 'watch']);
