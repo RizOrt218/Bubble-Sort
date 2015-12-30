@@ -2,15 +2,25 @@ var mergeSortModule = module.exports = (function () {
 
   return {
 
-  split : function( numArr, left, right ) {
-    //base case
-    if( numArr.length <= 1 ) {
-      return numArr;
+    merge : function( left, right ) {
+      var sortedArr = [];
+      var lf_i = 0;
+      var rt_i = 0;
+
+      while( lf_i < left.length && rt_i < right.length ) {
+        if( left[lf_i] < right[rt_i] ) {
+          sortedArr.push( left[lf_i] );
+          lf_i++;
+        }
+        else {
+          sortedArr.push( right[rt_i] );
+          rt_i++;
+        }
+        return sortedArr.console(left[lf_i]).concat(right[rt_i]);
+      }
     }
-    var midPoint = Math.floor( numArr.length/2 );
-    return split( left, right );
-  }
-};
+  };
+}());
 
   // return {
 
@@ -38,11 +48,14 @@ var mergeSortModule = module.exports = (function () {
 
 
   // };
-}());
+
 
 //split array in half
-//work with left half and run split fn until array = 1
+//recursively run the fn till you reach base case of --
+// array.length = 1
 
-
+var testArr = [ 3, 2, 1, 4];
+var mer = mergeSortModule;
+console.log( mer.merge( testArr ));
 
 

@@ -29,3 +29,8 @@ var bubbleSortModule = module.exports = (function () {
     }
   };
 }());
+
+var testing = $('<div>');
+  testing
+    .addClass ('testingClass');
+  $('body').append(testing);
