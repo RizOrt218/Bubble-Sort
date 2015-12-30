@@ -37,10 +37,10 @@ describe('Merge sort', function() {
     expect(mergeSortModule).to.be.a('object');
   });
 
-  it('should sort an unsorted array', function() {
-    var result = mergeSortModule.mergeSort([ 2, 3, 1, 4, 6, 5 ]);
+  // it('should sort an unsorted array', function() {
+  //   var result = mergeSortModule.splitArray([ 2, 3, 1, 4, 6, 5 ]);
 
-    expect( result ).to.be.an('array');
-    expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6 ]);
-  });
+  //   expect( result ).to.be.an('array');
+  //   expect( result ).to.deep.equal([ 1, 2, 3, 4, 5, 6 ]);
+  // });
 });
