@@ -3,19 +3,16 @@ var mergeSortModule = module.exports = (function () {
   return {
 
     mergeSort : function (numArr) {
-      var middle = Math.floor((numArr.length)/2);
-      var right = [];
+      var middle = Math.floor((numArr.length)/2); //3
 
       if ( numArr.length <= 1 ) {
         return numArr;
       }
-      // for( var i = 0; i < numArr.length; i++ ) {
-        console.log(middle);
-        var left = numArr.slice(0, middle);
-        console.log(left);
+      var left = numArr.slice(0, middle); //[2, 3, 1]
+      var right = numArr.slice(middle);
+      console.log(right);
 
       }
-    // }
 
 
   };
