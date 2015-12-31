@@ -1,4 +1,15 @@
-.testingClass {
-  background-color: gray;
-  height: 40px;
-  width: 20px; }
+.main {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D8EDC9; }
+
+.visualizeIt {
+  background-color: #AF5244;
+  width: 700px;
+  height: 500px;
+  margin: auto; }
