@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  font-family: verdana; }
+
 .main {
   position: fixed;
   padding: 0;
@@ -12,32 +16,66 @@
   background-color: #8B546F;
   margin-top: 30px;
   height: 60px;
-  width: 100%; }
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center; }
   .algoButtons .bubbleButt {
     border-right: 1px solid #F9F1DE;
     width: 200px;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: white; }
-  .algoButtons .bubbleButt:hover {
-    background-color: #C99EBA; }
+    justify-content: center; }
+  .algoButtons .quickButt {
+    border-right: 1px solid #F9F1DE;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .algoButtons .mergeBtn {
+    border-right: 1px solid #F9F1DE;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .algoButtons .insertionBtn {
+    border-right: 1px solid #F9F1DE;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .algoButtons .selectionBtn {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.bubbleButt:hover {
+  background-color: #C99EBA; }
 
 .visualizeIt {
   border: 5px solid #AF5244;
   background-color: white;
   width: 1300px;
   height: 500px;
-  margin: 50px 50px;
+  margin: 50px 50px; }
+
+.barsDiv {
   display: flex;
-  flex-flow: row nowrap; }
-  .visualizeIt .barsDiv {
-    margin: auto;
-    display: flex;
-    flex-flow: row nowrap; }
-    .visualizeIt .barsDiv .bars0 {
-      background-color: pink;
-      padding-top: %;
-      width: 20px; }
+  flex-flow: row nowrap;
+  flex: 0 0 100%;
+  align-items: flex-end;
+  background-color: #88BEBB;
+  height: 100%; }
+  .barsDiv .bars {
+    flex: 1 0 3%;
+    background-color: white;
+    border: 1px solid #A9C0D5; }

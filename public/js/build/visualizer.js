@@ -1,5 +1,48 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var bubbleSortModule = module.exports = (function () {
+
+  return {
+
+    bubbleSort : function (numArr) {
+    var count = 0;
+
+      for ( var i = 0; i < numArr.length; i++ ) {
+        var currentNum = numArr[i];
+        var next = numArr[i + 1];
+
+        //switch index if currentNum > next
+        if( currentNum > next ) {
+          numArr[i] = next;
+          numArr[i + 1] = currentNum;
+          count++; //increment count whenever switch takes place
+        }
+
+        //return numArr if reached end of array
+        if( i === (numArr.length - 1) ) {
+          if( count === 0 ){ //& if count is 0; does not need swapping
+            return numArr;
+          }
+          else {
+            return this.bubbleSort( numArr );
+          }
+        }
+      }
+    }
+  };
+}());
+//var testArr = [ 3, 2, 1, 4];
+//console.log( bubbleSortModule.bubbleSort( testArr ));
+
+var testing = $('<div>');
+  testing
+    .addClass ('testingClass');
+  $('body').append(testing);
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/bubbleSort.js","/")
+},{"1YiZ5S":6,"buffer":3}],2:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var bubbleSortModule = require('./bubbleSort');
+
 //========== main ==================
 
 var main = $( '<div>');
@@ -22,7 +65,41 @@ var algoButtons = $( '<div>' );
       .text ( 'Bubble' );
     $( algoButtons ).append( bubbleButt );
 
-//==================================
+    $( '.bubbleButt' ).click( function( ) {
+      var result = bubbleSortModule.bubbleSort( unsortedItems );
+      console.log(result);
+    });
+  //======== quick ================
+
+  var quickButt = $( '<div>' );
+    quickButt
+      .addClass ( 'quickButt' )
+      .text ( 'Quick' );
+    $( algoButtons ).append( quickButt );
+
+  //======== merge ================
+
+  var mergeBtn = $( '<div>' );
+    mergeBtn
+      .addClass ( 'mergeBtn' )
+      .text ( 'Merge' );
+    $( algoButtons ).append( mergeBtn );
+
+  //======== insertion ================
+
+  var insertionBtn = $( '<div>' );
+    insertionBtn
+      .addClass ( 'insertionBtn' )
+      .text ( 'Insertion' );
+    $( algoButtons ).append( insertionBtn );
+
+  //======== selection ================
+
+  var selectionBtn = $( '<div>' );
+    selectionBtn
+      .addClass ( 'selectionBtn' )
+      .text ( 'Selection' );
+    $( algoButtons ).append( selectionBtn );
 
 //========== viz ===================
 
@@ -38,22 +115,25 @@ var barsDiv = $( '<div>' );
     .addClass ( 'barsDiv' );
   $( visualizeIt ).append( barsDiv );
 
-//==================================
+//============== bars ==============
 
-var unsortedItems = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
+var unsortedItems = [];
 
-for( var i = 0; i < unsortedItems.length; i++ ) {
+for( var i = 0; i < 30; i++ ) {
+  var randomNums = Math.floor(( Math.random() * 30 ) + 1);
+  unsortedItems.push(randomNums);
+
   var bars = $( '<div>' );
     bars
-      .addClass( 'bars' + i )
+      .addClass( 'bars' )
       .text( unsortedItems[i] )
-      .css( 'background-color', 'red' );
+      .css( 'height', (10 * unsortedItems[i]) + 'px' );
     $( barsDiv ).append( bars );
 }
 //========== sorter button =========
 
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_d8b6e4bd.js","/")
-},{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_6d7f2186.js","/")
+},{"./bubbleSort":1,"1YiZ5S":6,"buffer":3}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1166,7 +1246,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/index.js","/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer")
-},{"1YiZ5S":5,"base64-js":3,"buffer":2,"ieee754":4}],3:[function(require,module,exports){
+},{"1YiZ5S":6,"base64-js":4,"buffer":3,"ieee754":5}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -1294,7 +1374,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"1YiZ5S":5,"buffer":2}],4:[function(require,module,exports){
+},{"1YiZ5S":6,"buffer":3}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -1382,7 +1462,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"1YiZ5S":5,"buffer":2}],5:[function(require,module,exports){
+},{"1YiZ5S":6,"buffer":3}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -1449,4 +1529,4 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/gulp-browserify/node_modules/browserify/node_modules/process/browser.js","/../node_modules/gulp-browserify/node_modules/browserify/node_modules/process")
-},{"1YiZ5S":5,"buffer":2}]},{},[1])
+},{"1YiZ5S":6,"buffer":3}]},{},[2])

@@ -1,3 +1,5 @@
+var bubbleSortModule = require('./bubbleSort');
+
 //========== main ==================
 
 var main = $( '<div>');
@@ -20,7 +22,41 @@ var algoButtons = $( '<div>' );
       .text ( 'Bubble' );
     $( algoButtons ).append( bubbleButt );
 
-//==================================
+    $( '.bubbleButt' ).click( function( ) {
+      var result = bubbleSortModule.bubbleSort( unsortedItems );
+      console.log(result);
+    });
+  //======== quick ================
+
+  var quickButt = $( '<div>' );
+    quickButt
+      .addClass ( 'quickButt' )
+      .text ( 'Quick' );
+    $( algoButtons ).append( quickButt );
+
+  //======== merge ================
+
+  var mergeBtn = $( '<div>' );
+    mergeBtn
+      .addClass ( 'mergeBtn' )
+      .text ( 'Merge' );
+    $( algoButtons ).append( mergeBtn );
+
+  //======== insertion ================
+
+  var insertionBtn = $( '<div>' );
+    insertionBtn
+      .addClass ( 'insertionBtn' )
+      .text ( 'Insertion' );
+    $( algoButtons ).append( insertionBtn );
+
+  //======== selection ================
+
+  var selectionBtn = $( '<div>' );
+    selectionBtn
+      .addClass ( 'selectionBtn' )
+      .text ( 'Selection' );
+    $( algoButtons ).append( selectionBtn );
 
 //========== viz ===================
 
@@ -36,16 +72,19 @@ var barsDiv = $( '<div>' );
     .addClass ( 'barsDiv' );
   $( visualizeIt ).append( barsDiv );
 
-//==================================
+//============== bars ==============
 
-var unsortedItems = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
+var unsortedItems = [];
 
-for( var i = 0; i < unsortedItems.length; i++ ) {
+for( var i = 0; i < 30; i++ ) {
+  var randomNums = Math.floor(( Math.random() * 30 ) + 1);
+  unsortedItems.push(randomNums);
+
   var bars = $( '<div>' );
     bars
-      .addClass( 'bars' + i )
+      .addClass( 'bars' )
       .text( unsortedItems[i] )
-      .css( 'background-color', 'red' );
+      .css( 'height', (10 * unsortedItems[i]) + 'px' );
     $( barsDiv ).append( bars );
 }
 //========== sorter button =========
