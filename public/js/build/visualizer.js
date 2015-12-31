@@ -1,69 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var mergeSortModule = module.exports = (function () {
-
-  return {
-
-    merge : function( left, right ) {
-      var sortedArr = [];
-      var lf_i = 0;
-      var rt_i = 0;
-
-      while( lf_i < left.length && rt_i < right.length ) {
-        if( left[lf_i] < right[rt_i] ) {
-          sortedArr.push( left[lf_i] );
-          lf_i++;
-        }
-        else {
-          sortedArr.push( right[rt_i] );
-          rt_i++;
-        }
-        return sortedArr.console(left[lf_i]).concat(right[rt_i]);
-      }
-    }
-  };
-}());
-
-  // return {
-
-  //   mergeSort : function( numArr ) {
-  //     var ltIndex = 0;
-  //     var rtIndex = 0;
-
-  //     if ( numArr.length <= 1 ) {
-  //       return numArr;
-  //     }
-  //     var middle = Math.floor( numArr.length/2 ); //3
-  //     var left = numArr.slice( 0, middle ); //[2, 3, 1]
-  //     var right = numArr.slice( middle ); //[4, 6, 5]
-
-  //     function compareBoth ( left, right ) {
-  //       var sortedArray = [];
-  //       while( leftIndex < left.length && rightIndex < right.length ) {
-  //         if( left[ltIndex] < right[rtIndex] ){
-  //           sortedArray.push(left[ltIndex]);
-  //           ltIndex++;
-  //         }
-  //       }
-  //     }
-  // }
-
-
-  // };
-
-
-//split array in half
-//recursively run the fn till you reach base case of --
-// array.length = 1
-
-var testArr = [ 3, 2, 1, 4];
-console.log(testArr);
-// var mer = mergeSortModule;
-// console.log( mer.merge( testArr ));
-
-
-
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_aa08438b.js","/")
+var testing = $( '<div>' );
+  testing
+    .addClass ( 'testingClass' );
+  $( 'body' ).append( testing );
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9cb599c2.js","/")
 },{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
