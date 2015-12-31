@@ -8,8 +8,36 @@
   height: 100%;
   background: #D8EDC9; }
 
+.algoButtons {
+  background-color: #8B546F;
+  margin-top: 30px;
+  height: 60px;
+  width: 100%; }
+  .algoButtons .bubbleButt {
+    border-right: 1px solid #F9F1DE;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white; }
+  .algoButtons .bubbleButt:hover {
+    background-color: #C99EBA; }
+
 .visualizeIt {
-  background-color: #AF5244;
-  width: 700px;
+  border: 5px solid #AF5244;
+  background-color: white;
+  width: 1300px;
   height: 500px;
-  margin: auto; }
+  margin: 50px 50px;
+  display: flex;
+  flex-flow: row nowrap; }
+  .visualizeIt .barsDiv {
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap; }
+    .visualizeIt .barsDiv .bars0 {
+      background-color: pink;
+      padding-top: %;
+      width: 20px; }

@@ -7,6 +7,23 @@ var main = $( '<div>');
     .addClass( 'main' );
   $( 'body' ).append( main );
 
+//===== sort algo buttons ==========
+
+var algoButtons = $( '<div>' );
+  algoButtons
+    .addClass ( 'algoButtons' );
+  $( main ).append( algoButtons );
+
+  //======== bubble ================
+
+  var bubbleButt = $( '<div>' );
+    bubbleButt
+      .addClass ( 'bubbleButt' )
+      .text ( 'Bubble' );
+    $( algoButtons ).append( bubbleButt );
+
+//==================================
+
 //========== viz ===================
 
 var visualizeIt = $( '<div>' );
@@ -14,9 +31,28 @@ var visualizeIt = $( '<div>' );
     .addClass ( 'visualizeIt' );
   $( main ).append( visualizeIt );
 
+//=========== bars div =============
+
+var barsDiv = $( '<div>' );
+  barsDiv
+    .addClass ( 'barsDiv' );
+  $( visualizeIt ).append( barsDiv );
+
+//==================================
+
+var unsortedItems = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
+
+for( var i = 0; i < unsortedItems.length; i++ ) {
+  var bars = $( '<div>' );
+    bars
+      .addClass( 'bars' + i )
+      .text( unsortedItems[i] )
+      .css( 'background-color', 'red' );
+    $( barsDiv ).append( bars );
+}
 //========== sorter button =========
 
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_39ba3101.js","/")
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_d8b6e4bd.js","/")
 },{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
