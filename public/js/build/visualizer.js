@@ -31,13 +31,7 @@ var bubbleSortModule = module.exports = (function () {
     }
   };
 }());
-//var testArr = [ 3, 2, 1, 4];
-//console.log( bubbleSortModule.bubbleSort( testArr ));
 
-var testing = $('<div>');
-  testing
-    .addClass ('testingClass');
-  $('body').append(testing);
 }).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/bubbleSort.js","/")
 },{"1YiZ5S":6,"buffer":3}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
@@ -65,10 +59,10 @@ var algoButtons = $( '<div>' );
       .text ( 'Bubble' );
     $( algoButtons ).append( bubbleButt );
 
-    $( '.bubbleButt' ).click( function( ) {
-      var result = bubbleSortModule.bubbleSort( unsortedItems );
-      console.log(result);
-    });
+    // $( '.bubbleButt' ).click( function( ) {
+    //   var result = bubbleSortModule.bubbleSort( unsortedItems );
+    //   console.log(result);
+    // });
   //======== quick ================
 
   var quickButt = $( '<div>' );
@@ -118,21 +112,47 @@ var barsDiv = $( '<div>' );
 //============== bars ==============
 
 var unsortedItems = [];
+var click = false;
+console.log(click);
 
-for( var i = 0; i < 30; i++ ) {
+
+for( var i = 0; i < 4; i++ ) {
   var randomNums = Math.floor(( Math.random() * 30 ) + 1);
-  unsortedItems.push(randomNums);
+    unsortedItems.push(randomNums);
+  var randomHeight = 10 * unsortedItems[i];
+console.log(unsortedItems);
 
   var bars = $( '<div>' );
     bars
       .addClass( 'bars' )
       .text( unsortedItems[i] )
-      .css( 'height', (10 * unsortedItems[i]) + 'px' );
+      .css( 'height', (randomHeight) + 'px' );
     $( barsDiv ).append( bars );
-}
-//========== sorter button =========
 
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_6d7f2186.js","/")
+}
+//============ click event ==========
+
+    $( '.bubbleButt' ).click( function ( evnt ) {
+      var result = bubbleSortModule.bubbleSort( unsortedItems );
+      console.log(result);
+        click = true;
+      console.log( click );
+      crtSrtArr(result);
+
+    });
+
+// function crtSrtArr (result) {
+//   for( var j = 0; j < result.length; j++ ) {
+
+//       var bars = $( '<div>' );
+//     bars
+//       .addClass( 'bars' )
+//       .text( result[j] )
+//       .css( 'height', (10 * result[j]) + 'px' );
+//     $( barsDiv ).append( bars );
+//   }
+// }
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_72eeb80a.js","/")
 },{"./bubbleSort":1,"1YiZ5S":6,"buffer":3}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

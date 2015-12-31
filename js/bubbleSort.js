@@ -29,10 +29,3 @@ var bubbleSortModule = module.exports = (function () {
     }
   };
 }());
-//var testArr = [ 3, 2, 1, 4];
-//console.log( bubbleSortModule.bubbleSort( testArr ));
-
-var testing = $('<div>');
-  testing
-    .addClass ('testingClass');
-  $('body').append(testing);

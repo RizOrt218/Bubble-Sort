@@ -22,10 +22,10 @@ var algoButtons = $( '<div>' );
       .text ( 'Bubble' );
     $( algoButtons ).append( bubbleButt );
 
-    $( '.bubbleButt' ).click( function( ) {
-      var result = bubbleSortModule.bubbleSort( unsortedItems );
-      console.log(result);
-    });
+    // $( '.bubbleButt' ).click( function( ) {
+    //   var result = bubbleSortModule.bubbleSort( unsortedItems );
+    //   console.log(result);
+    // });
   //======== quick ================
 
   var quickButt = $( '<div>' );
@@ -75,16 +75,43 @@ var barsDiv = $( '<div>' );
 //============== bars ==============
 
 var unsortedItems = [];
+var click = false;
+console.log(click);
 
-for( var i = 0; i < 30; i++ ) {
+
+for( var i = 0; i < 4; i++ ) {
   var randomNums = Math.floor(( Math.random() * 30 ) + 1);
-  unsortedItems.push(randomNums);
+    unsortedItems.push(randomNums);
+  var randomHeight = 10 * unsortedItems[i];
+console.log(unsortedItems);
 
   var bars = $( '<div>' );
     bars
       .addClass( 'bars' )
       .text( unsortedItems[i] )
-      .css( 'height', (10 * unsortedItems[i]) + 'px' );
+      .css( 'height', (randomHeight) + 'px' );
     $( barsDiv ).append( bars );
+
 }
-//========== sorter button =========
+//============ click event ==========
+
+    $( '.bubbleButt' ).click( function ( evnt ) {
+      var result = bubbleSortModule.bubbleSort( unsortedItems );
+      console.log(result);
+        click = true;
+      console.log( click );
+      crtSrtArr(result);
+
+    });
+
+// function crtSrtArr (result) {
+//   for( var j = 0; j < result.length; j++ ) {
+
+//       var bars = $( '<div>' );
+//     bars
+//       .addClass( 'bars' )
+//       .text( result[j] )
+//       .css( 'height', (10 * result[j]) + 'px' );
+//     $( barsDiv ).append( bars );
+//   }
+// }
