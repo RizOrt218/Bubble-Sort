@@ -74,34 +74,38 @@ var barsDiv = $( '<div>' );
 
 //============== bars ==============
 
-var unsortedItems = [];
+var unsortedItems = [ 6, 3, 1, 2 ];
+var sorted;
 var click = false;
 console.log(click);
 
 
-for( var i = 0; i < 4; i++ ) {
-  var randomNums = Math.floor(( Math.random() * 30 ) + 1);
-    unsortedItems.push(randomNums);
+for( var i = 0; i < 5; i++ ) {
+  // var randomNums = Math.floor(( Math.random() * 30 ) + 1);
+    // unsortedItems.push(randomNums);
   var randomHeight = 10 * unsortedItems[i];
-console.log(unsortedItems);
 
   var bars = $( '<div>' );
     bars
       .addClass( 'bars' )
       .text( unsortedItems[i] )
       .css( 'height', (randomHeight) + 'px' );
+    if( click === true ) {
+      $( 'bars' ).text = sorted;
+      console.log('trruruuu??');
+    }
+
     $( barsDiv ).append( bars );
 
 }
 //============ click event ==========
 
     $( '.bubbleButt' ).click( function ( evnt ) {
-      var result = bubbleSortModule.bubbleSort( unsortedItems );
-      console.log(result);
-        click = true;
-      console.log( click );
-      crtSrtArr(result);
-
+      sorted = bubbleSortModule.bubbleSort( unsortedItems );
+      click = true;
+      console.log(unsortedItems);
+      console.log(click);
+      return sorted;
     });
 
 // function crtSrtArr (result) {

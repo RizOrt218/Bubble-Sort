@@ -111,34 +111,39 @@ var barsDiv = $( '<div>' );
 
 //============== bars ==============
 
-var unsortedItems = [];
+var unsortedItems = [ 6, 3, 1, 2 ];
+var sorted;
 var click = false;
 console.log(click);
 
 
-for( var i = 0; i < 4; i++ ) {
-  var randomNums = Math.floor(( Math.random() * 30 ) + 1);
-    unsortedItems.push(randomNums);
+for( var i = 0; i < 5; i++ ) {
+  // var randomNums = Math.floor(( Math.random() * 30 ) + 1);
+    // unsortedItems.push(randomNums);
   var randomHeight = 10 * unsortedItems[i];
-console.log(unsortedItems);
-
+// console.log(result);
   var bars = $( '<div>' );
     bars
       .addClass( 'bars' )
       .text( unsortedItems[i] )
       .css( 'height', (randomHeight) + 'px' );
+      // // .css( 'height', $this.result(randomHeight) + 'px' )
+    if( click === true ) {
+      $( 'bars' ).text = sorted;
+      console.log('trruruuu??');
+    }
+
     $( barsDiv ).append( bars );
 
 }
 //============ click event ==========
 
     $( '.bubbleButt' ).click( function ( evnt ) {
-      var result = bubbleSortModule.bubbleSort( unsortedItems );
-      console.log(result);
-        click = true;
-      console.log( click );
-      crtSrtArr(result);
-
+      sorted = bubbleSortModule.bubbleSort( unsortedItems );
+      click = true;
+      console.log(unsortedItems);
+      console.log(click);
+      return sorted;
     });
 
 // function crtSrtArr (result) {
@@ -152,7 +157,7 @@ console.log(unsortedItems);
 //     $( barsDiv ).append( bars );
 //   }
 // }
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_72eeb80a.js","/")
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b0cb5ab2.js","/")
 },{"./bubbleSort":1,"1YiZ5S":6,"buffer":3}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
