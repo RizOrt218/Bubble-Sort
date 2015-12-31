@@ -31,12 +31,14 @@ var bubbleSortModule = module.exports = (function () {
     }
   };
 }());
+var testArr = [ 3, 2, 1, 4];
+console.log( bubbleSortModule.bubbleSort( testArr ));
 
 var testing = $('<div>');
   testing
     .addClass ('testingClass');
   $('body').append(testing);
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_a16f7318.js","/")
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_71f93e8e.js","/")
 },{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

@@ -24,6 +24,7 @@ gulp.task('livereload', function (){
 gulp.task('watch', function () {
   gulp.watch('./scss/**/*.scss', ['sass']);
   gulp.watch('./public/**/*', ['livereload']);
+  gulp.watch('./js/**/*', ['livereload', 'build']);
 });
 
 gulp.task('build', function() {

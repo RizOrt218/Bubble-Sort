@@ -55,7 +55,8 @@ var mergeSortModule = module.exports = (function () {
 // array.length = 1
 
 var testArr = [ 3, 2, 1, 4];
-var mer = mergeSortModule;
-console.log( mer.merge( testArr ));
+console.log(testArr);
+// var mer = mergeSortModule;
+// console.log( mer.merge( testArr ));
 
 

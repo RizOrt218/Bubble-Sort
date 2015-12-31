@@ -57,12 +57,13 @@ var mergeSortModule = module.exports = (function () {
 // array.length = 1
 
 var testArr = [ 3, 2, 1, 4];
-var mer = mergeSortModule;
-console.log( mer.merge( testArr ));
+console.log(testArr);
+// var mer = mergeSortModule;
+// console.log( mer.merge( testArr ));
 
 
 
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_d713fadc.js","/")
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_49adf496.js","/")
 },{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

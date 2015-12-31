@@ -24,7 +24,10 @@ function quickSort( numArr ) {
   return quickSort(left).concat(pivot, quickSort(right));
 
 }
-}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_c893e528.js","/")
+var testArr = [ 3, 2, 1, 4];
+console.log(testArr);
+// console.log( quickSort( testArr ));
+}).call(this,require("1YiZ5S"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_15b1d4cf.js","/")
 },{"1YiZ5S":5,"buffer":2}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

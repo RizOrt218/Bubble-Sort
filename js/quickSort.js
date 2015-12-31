@@ -22,3 +22,6 @@ function quickSort( numArr ) {
   return quickSort(left).concat(pivot, quickSort(right));
 
 }
+var testArr = [ 3, 2, 1, 4];
+console.log(testArr);
+// console.log( quickSort( testArr ));
